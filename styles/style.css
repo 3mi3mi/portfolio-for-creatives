@@ -32,8 +32,8 @@
 /* TODO: Replace these Google Fonts with the ones you want to use on your site. */
 /* Remember, the more fonts you load, the longer it can take for your page to load. */
 
-/* Eczar Font (for headers or special text) */
-@import url("https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&display=swap");
+/* League Gothic Font (for headers or special text) */
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
 
 /* Rubik Font (clean and modern for body text) */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap");
@@ -106,7 +106,7 @@
 :root {
   /* Typography */
   --font-family-body: "Inter", sans-serif;
-  --font-family-heading: "Datatype", sans-serif;
+  --font-family-heading: "League Gothic", sans-serif;
   --font-family-project-title: "Eczar", serif;
   /* Core Colours */
   --color-text-primary: #222;
@@ -118,8 +118,8 @@
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
   --color-bg: #a49595;
-  --color-bg-about: #111010;
-  --color-bg-footer: #171616;
+  --color-bg-about: #b1a1a1;
+  --color-bg-footer: #ceb7b7;
   --color-bg-holding-page: rgba(82, 0, 255, 0.6);
   /* Headings */
   --h1-color: #ffffff;
@@ -452,7 +452,7 @@ svg {
 /* Heading Styles (h1 - h6) */
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 5rem;
   font-family: var(--font-family-heading);
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -699,7 +699,7 @@ a.nav-link-primary:hover {
   flex-direction: column;
   justify-content: space-between;
   padding: var(--padding-small);
-  align-items: center;
+  align-items: left;
 }
 
 .nav-branding-group {
