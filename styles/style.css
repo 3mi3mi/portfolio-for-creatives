@@ -113,7 +113,7 @@
   --color-text-secondary: #727272;
   --color-accent-primary: #727272;
   --color-accent-secondary: #ff057c;
-  --color-overlay-primary: rgba(226, 226, 226, 0.5);
+  --color-overlay-primary: rgba(255, 79, 79, 0.8);
   --color-highlight: lemonchiffon;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
