@@ -150,7 +150,7 @@
   --color-bg-full-width: #f5f5f5;
   --color-bg-project-description: #f5f5f5;
   --color-bg-sidebar-project: orangered;
-  --color-bg-sidebar-work: #1f1f21;
+  --color-bg-sidebar-work: #161617;
   --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
   --color-gradient-project-details: linear-gradient(
     -225deg,
@@ -926,7 +926,8 @@ a.nav-link-primary:hover {
 
 /* Sidebar navigation list styles */
 .sidebar-nav-list {
-  padding: var(--padding-small); /* Adds padding around the navigation list */
+  padding: var(--padding-small);
+  font-size: 1.3rem; /* Adds padding around the navigation list */
 }
 
 /* Individual navigation item styles */
@@ -1462,7 +1463,7 @@ to keep your styles reusable and consistent.
   }
 
   .nav-branding-logo {
-    width: 5rem;
+    width: 12rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
