@@ -111,9 +111,9 @@
   /* Core Colours */
   --color-text-primary: #727272;
   --color-text-secondary: #727272;
-  --color-accent-primary: #727272;
+  --color-accent-primary: #464545;
   --color-accent-secondary: #ff057c;
-  --color-overlay-primary: rgba(255, 79, 79, 0.8);
+  --color-overlay-primary: #ff5cc155;
   --color-highlight: lemonchiffon;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
@@ -136,9 +136,9 @@
   --color-text-project-title: #727272;
   --color-text-work-grid-title: #ffffff;
   /* Link States */
-  --color-link: #727272;
+  --color-link: #ababab;
   --color-link-hover: #ff5cc0;
-  --color-link-visited: #727272;
+  --color-link-visited: #ababab;
   /* Navigation */
   --color-nav-link: #ff75f8;
   --color-nav-link-hover: #faf8ff;
@@ -159,7 +159,7 @@
     #321575 100%
   );
   /* Special Elements */
-  --color-icon-heart: darkred;
+  --color-icon-heart: #ff5cc0;
   --color-text-holding-footer: #f8f8ff;
   --color-bg-selection: #5200ff;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
@@ -504,7 +504,7 @@ h6 {
 p {
   font-size: 1rem;
   line-height: 1.3;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 strong {
@@ -712,7 +712,7 @@ a.nav-link-primary:hover {
 }
 
 .nav-branding-logo {
-  width: 3rem;
+  width: 1rem;
   /* TODO: Adjust the width of the logo on mobile devices here */
 }
 
@@ -1463,12 +1463,12 @@ to keep your styles reusable and consistent.
   }
 
   .nav-branding-logo {
-    width: 12rem;
+    width: 9rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
   .hero {
-    min-height: 100vh;
+    min-height: 70vh;
   }
 
   .hero-headline-wrapper {
