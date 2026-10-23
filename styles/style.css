@@ -571,7 +571,7 @@ sup {
 
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
-  font-size: 2.875rem;
+  font-size: 2rem;
   color: var(--color-text-work-grid-title);
   text-wrap: balance;
 }
@@ -850,7 +850,7 @@ a.nav-link-primary:hover {
     auto-fit,
     minmax(300px, 1fr)
   ); /* Creates a responsive grid */
-  grid-gap: 1rem; /* Space between grid items */
+  grid-gap: 0.5rem; /* Space between grid items */
   /* The auto-fit and minmax() function help ensure responsiveness across screen sizes */
 }
 
@@ -868,8 +868,10 @@ a.nav-link-primary:hover {
 
 /* Project container for background and padding */
 .project-container {
-  background: var(--color-accent-primary); /* Set project background color */
-  padding: var(--padding-medium);
+  background: var(--color-bg); /* Set project background color */
+  padding: var(--padding-small);
+  border: 2px solid var(--color-accent-primary);
+  border-radius: var(--radius-sm);
 }
 
 /* Overlay (appears on hover) */
