@@ -33,7 +33,7 @@
 /* Remember, the more fonts you load, the longer it can take for your page to load. */
 
 /* League Gothic Font (for headers or special text) */
-@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cossette+Titre:wght@400;700&display=swap");
 
 /* Rubik Font (clean and modern for body text) */
 @import url("https://fonts.googleapis.com/css2?family=Cossette+Texte:wght@400;700&display=swap");
@@ -106,7 +106,7 @@
 :root {
   /* Typography */
   --font-family-body: "Cossette Texte", sans-serif;
-  --font-family-heading: "League Gothic", sans-serif;
+  --font-family-heading: "Cossette Titre", sans-serif;
   --font-family-project-title: "Cossette Texte", serif;
   /* Core Colours */
   --color-text-primary: #727272;
@@ -134,7 +134,7 @@
   --color-text-project-description: #222;
   --color-text-project-sidebar: #222;
   --color-text-project-title: #727272;
-  --color-text-work-grid-title: #ffffff;
+  --color-text-work-grid-title: #727272;
   /* Link States */
   --color-link: #ababab;
   --color-link-hover: #ff5cc0;
@@ -574,6 +574,8 @@ sup {
   font-size: 2rem;
   color: var(--color-text-work-grid-title);
   text-wrap: balance;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
 }
 
 /* 🏷️ Project category label — displays the type or role of the project */
@@ -853,7 +855,16 @@ a.nav-link-primary:hover {
   grid-gap: 0.5rem; /* Space between grid items */
   /* The auto-fit and minmax() function help ensure responsiveness across screen sizes */
 }
-
+/*tag item style*/
+.tag {
+  font-family: "Cossette Texte";
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid #111;
+  padding: 7px 10px;
+}
 /* Individual Work Grid Item */
 .work-page-grid-item,
 .overlay-container {
@@ -872,6 +883,7 @@ a.nav-link-primary:hover {
   padding: var(--padding-small);
   border: 2px solid var(--color-accent-primary);
   border-radius: var(--radius-sm);
+  box-shadow: 4px 4px 0 var(--color-accent-primary);
 }
 
 /* Overlay (appears on hover) */
