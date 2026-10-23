@@ -112,12 +112,12 @@
   --color-text-primary: #727272;
   --color-text-secondary: #727272;
   --color-accent-primary: #464545;
-  --color-accent-secondary: #ff057c;
+  --color-accent-secondary: #ff5cc0;
   --color-overlay-primary: #ff5cc155;
   --color-highlight: lemonchiffon;
-  --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
+  --color-fallback: #ff5cc0; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
-  --color-bg: #161617;
+  --color-bg: #080808;
   --color-bg-about: #161617;
   --color-bg-footer: #161617;
   --color-bg-holding-page: rgba(82, 0, 255, 0.6);
@@ -140,8 +140,9 @@
   --color-link-hover: #ff5cc0;
   --color-link-visited: #ababab;
   /* Navigation */
-  --color-nav-link: #ff75f8;
-  --color-nav-link-hover: #faf8ff;
+  --color-nav-link: #727272;
+  --color-nav-link-hover: #ff5cc0;
+  --color-nav-link-active: var(--color-accent-secondary);
   --color-nav-arrow: #5200ff;
   --color-nav-arrow-hover: #000;
   --color-nav-arrow-stroke: #5200ff;
@@ -212,7 +213,7 @@ html {
   box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
   cursor:
-    url("../assets/temp/up-cursor.png"), auto !important; /* Custom cursor (change the URL below to use your own) */
+    url("../assets/branding-images/cursor.png"), auto !important; /* Custom cursor (change the URL below to use your own) */
 
   /* TODO: Replace the URL above to add a custom cursor. 
      If you want to use the default browser cursor, just delete this line. */
@@ -613,6 +614,7 @@ a:visited {
 /* Hover — when a user hovers their mouse over the link */
 a:hover {
   color: var(--color-link-hover);
+  cursor: url("../assets/branding-images/cursor.png"), auto;
 }
 
 /* Focus — when a link is focused (keyboard navigation) */
@@ -623,6 +625,7 @@ a:focus {
 /* Active — when the link is actively being clicked or tapped */
 a:active {
   color: var(--color-link-hover);
+  cursor: url("../assets/branding-images/cursor.png"), auto;
   /* Useful for mobile tap interactions */
 }
 
