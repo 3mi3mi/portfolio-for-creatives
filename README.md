@@ -53,7 +53,7 @@ Here’s how you can bring your portfolio online in no time:
 Get your portfolio up and running in seconds:
 
 1. Open `index.html` if you're using a splash page
-2. Or open `work.html` to go straight to your projects
+2. Or open `index.html` to go straight to your projects
 3. Begin customizing project-1.html to showcase your first real project!
 
 🛠️ Want to make it your own? See the beginner-friendly edits below.
@@ -62,8 +62,8 @@ Get your portfolio up and running in seconds:
 
 These are great first steps to customize your portfolio visually without writing any real code.
 
-1. **Change the hero text in `work.html`**  
-   Open `work.html` and look near the top. Replace the big heading with your own intro.  
+1. **Change the hero text in `index.html`**  
+   Open `index.html` and look near the top. Replace the big heading with your own intro.  
    _Example: “Welcome to My Portfolio” or “Hi, I’m [Your Name], a Graphic Designer!”_
 
 2. **Edit the colours in `style.css`**  
@@ -80,7 +80,7 @@ These are great first steps to customize your portfolio visually without writing
    `--font-family-project-title`
 
 4. **Update your social media links**  
-   Open `work.html` and scroll to the footer. Look for links like:  
+   Open `index.html` and scroll to the footer. Look for links like:  
    `<a href="#">Insta</a>`  
    `<a href="#">LinkedIn</a>`  
    `<a href="#">Behance</a>`  
@@ -103,7 +103,7 @@ After making these changes, visit your live site to see the changes in action!
 | Page Name                 | Description                                    |
 | ------------------------- | ---------------------------------------------- |
 | `index.html`              | Holding page (optional intro/splash)           |
-| `work.html`               | Classic work grid layout                       |
+| `index.html`              | Classic work grid layout                       |
 | `work-sidebar.html`       | Work grid with sticky sidebar navigation       |
 | `work-titles-below.html`  | Project titles below thumbnails                |
 | `work-clean.html`         | Clean version with no overlays                 |

@@ -299,7 +299,11 @@ svg {
 
 /* Adds a dashed border to help you see the box while you're designing */
 .border {
-  border: 1px dashed var(--color-accent-primary); /* This uses your custom accent color */
+  border: 1px dashed var(--color-accent-primary);
+  border-radius: 5px;
+  
+  /* corner-shape: notch; */
+   /* This uses your custom accent color */
   /* TODO: Delete this later – it’s just here to help you see the box while you work */
 }
 
@@ -562,6 +566,7 @@ sup {
   line-height: 1.2rem;
 }
 
+
 /* 🧱 Full-width headings — useful in layouts that span edge-to-edge */
 .h1-full-width,
 .h2-full-width {
@@ -650,12 +655,26 @@ a:active {
 a.nav-link-primary {
   color: var(--color-nav-link);
 }
+a.nav-link-primary-active {
+  color: var(--color-nav-link-hover);
+}
+a.nav-link-primary-active:hover {
+  color: var(--color-nav-link-hover);
+  filter: blur(1.5px); 
+  transition: filter 0.2s ease, transform 0.2s ease;
+
+}
+
 a.nav-link-other {
   color: var(--color-nav-link-other);
 }
 a.nav-link-primary:hover {
   color: var(--color-nav-link-hover);
+  filter: blur(1.5px); 
+  transition: filter 0.2s ease, transform 0.2s ease;
+
 }
+
 
 /* -------------------------------------------------------------------------- */
 /* 🧭 Previous & Next Project Navigation Arrows                               */
@@ -706,6 +725,18 @@ a.nav-link-primary:hover {
 /* Great place for first impression and personal branding                    */
 /* -------------------------------------------------------------------------- */
 
+
+
+/* ─── Cursor trail ──────────────────────────────────────── */
+.trail-img {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+  transform: translate(-50%, 0);
+  z-index: -1;
+}
+
 .hero {
   width: 100%;
   min-height: 80vh; /* Takes up most of the screen height */
@@ -721,7 +752,7 @@ a.nav-link-primary:hover {
   flex-direction: column;
   justify-content: space-between;
   padding: var(--padding-small);
-  align-items: left;
+  align-items: flex-start;
 }
 
 .nav-branding-group {
@@ -733,7 +764,7 @@ a.nav-link-primary:hover {
 }
 
 .nav-branding-logo {
-  width: 9rem;
+  width: 7rem;
   /* TODO: Adjust the width of the logo on mobile devices here */
 }
 
@@ -888,7 +919,7 @@ a.nav-link-primary:hover {
   font-family: "Cossette Texte";
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   border-width: 1px;
   border-style: dashed;
@@ -896,6 +927,9 @@ a.nav-link-primary:hover {
   border-image: none;
   padding: 7px 10px;
   list-style-type: none;
+  border-radius: 3px;
+  /* corner-shape: notch; */
+
 }
 .tag-list {
   display: flex;
@@ -920,6 +954,8 @@ a.nav-link-primary:hover {
   background: var(--color-bg); /* Set project background color */
   padding: var(--padding-small);
   border: 1px dashed var(--color-accent-primary);
+  border-radius: 5px;
+  /* corner-shape: notch; */
 }
 
 /* Overlay (appears on hover) */
@@ -1516,7 +1552,8 @@ to keep your styles reusable and consistent.
   }
 
   .nav-branding-logo {
-    width: 9rem;
+    width: 7rem;
+    padding-left: 16px;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
