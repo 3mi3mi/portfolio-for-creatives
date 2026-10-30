@@ -216,7 +216,8 @@ html {
   box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
   cursor:
-    url("../assets/branding-images/cursor.png"), auto !important; /* Custom cursor (change the URL below to use your own) */
+    url("../assets/branding-images/newcursor.svg") 16 16,
+    auto !important; /* Custom cursor (change the URL below to use your own) */
 
   /* TODO: Replace the URL above to add a custom cursor. 
      If you want to use the default browser cursor, just delete this line. */
@@ -301,9 +302,9 @@ svg {
 .border {
   border: 1px dashed var(--color-accent-primary);
   border-radius: 5px;
-  
+
   /* corner-shape: notch; */
-   /* This uses your custom accent color */
+  /* This uses your custom accent color */
   /* TODO: Delete this later – it’s just here to help you see the box while you work */
 }
 
@@ -566,7 +567,6 @@ sup {
   line-height: 1.2rem;
 }
 
-
 /* 🧱 Full-width headings — useful in layouts that span edge-to-edge */
 .h1-full-width,
 .h2-full-width {
@@ -632,7 +632,9 @@ a:visited {
 /* Hover — when a user hovers their mouse over the link */
 a:hover {
   color: var(--color-link-hover);
-  cursor: url("../assets/branding-images/cursor.png"), auto;
+  cursor:
+    url("../assets/branding-images/hovercursor.svg") 16 16,
+    auto;
 }
 
 /* Focus — when a link is focused (keyboard navigation) */
@@ -643,7 +645,7 @@ a:focus {
 /* Active — when the link is actively being clicked or tapped */
 a:active {
   color: var(--color-link-hover);
-  cursor: url("../assets/branding-images/cursor.png"), auto;
+  cursor: url("../assets/branding-images/hovercursor.svg"), auto;
   /* Useful for mobile tap interactions */
 }
 
@@ -660,9 +662,10 @@ a.nav-link-primary-active {
 }
 a.nav-link-primary-active:hover {
   color: var(--color-nav-link-hover);
-  filter: blur(1.5px); 
-  transition: filter 0.2s ease, transform 0.2s ease;
-
+  filter: blur(1.5px);
+  transition:
+    filter 0.2s ease,
+    transform 0.2s ease;
 }
 
 a.nav-link-other {
@@ -670,11 +673,11 @@ a.nav-link-other {
 }
 a.nav-link-primary:hover {
   color: var(--color-nav-link-hover);
-  filter: blur(1.5px); 
-  transition: filter 0.2s ease, transform 0.2s ease;
-
+  filter: blur(1.5px);
+  transition:
+    filter 0.2s ease,
+    transform 0.2s ease;
 }
-
 
 /* -------------------------------------------------------------------------- */
 /* 🧭 Previous & Next Project Navigation Arrows                               */
@@ -725,8 +728,6 @@ a.nav-link-primary:hover {
 /* Great place for first impression and personal branding                    */
 /* -------------------------------------------------------------------------- */
 
-
-
 /* ─── Cursor trail ──────────────────────────────────────── */
 .trail-img {
   position: fixed;
@@ -739,7 +740,7 @@ a.nav-link-primary:hover {
 
 .hero {
   width: 100%;
-  min-height: 80vh; /* Takes up most of the screen height */
+  min-height: 100vh; /* Takes up most of the screen height */
   display: flex;
   flex-direction: column;
 }
@@ -877,9 +878,8 @@ a.nav-link-primary:hover {
 .portfolio,
 .project-wrapper,
 .work-sidebar-wrapper {
-  padding: var(
-    --padding-tiny
-  ); /* Padding to keep content from touching edges */
+  padding: var(--padding-tiny);
+  background: #0e0e0f; /* Padding to keep content from touching edges */
 }
 
 /* Work Sidebar on Mobile */
@@ -929,7 +929,6 @@ a.nav-link-primary:hover {
   list-style-type: none;
   border-radius: 3px;
   /* corner-shape: notch; */
-
 }
 .tag-list {
   display: flex;
@@ -1081,11 +1080,10 @@ a.nav-link-primary:hover {
   min-height: auto; /* Allows footer to expand based on content, no fixed height */
   background: var(--color-bg-footer); /* Using CSS variable for theming */
   padding: var(--padding-small); /* Internal spacing */
-  border-top:1px dashed var(--color-accent-primary);
+  border-top: 1px dashed var(--color-accent-primary);
 }
 
-  /* Note: Using 'fr' units ensures proper scaling across devices */
-}
+/* Note: Using 'fr' units ensures proper scaling across devices */
 
 /* -------------------------------------------------------------------------- */
 /* 🧩 FOOTER SECTION PLACEMENT                                                */

@@ -29,7 +29,7 @@ const isMobile = () =>
 // ─── Desktop: cursor trail ───────────────────────────────
 let lastX = null;
 let lastY = null;
-const spacing = 40;
+const spacing = 30;
 
 document.addEventListener("mousemove", (e) => {
   if (isMobile()) return;
