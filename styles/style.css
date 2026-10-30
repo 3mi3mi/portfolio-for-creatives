@@ -216,7 +216,7 @@ html {
   box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
   cursor:
-    url("../assets/branding-images/newcursor.svg") 16 16,
+    url("../assets/branding-images/newcursor.svg") 12 12,
     auto !important; /* Custom cursor (change the URL below to use your own) */
 
   /* TODO: Replace the URL above to add a custom cursor. 
@@ -633,7 +633,7 @@ a:visited {
 a:hover {
   color: var(--color-link-hover);
   cursor:
-    url("../assets/branding-images/hovercursor.svg") 16 16,
+    url("../assets/branding-images/hovercursor.svg") 12 12,
     auto;
 }
 
@@ -645,7 +645,9 @@ a:focus {
 /* Active — when the link is actively being clicked or tapped */
 a:active {
   color: var(--color-link-hover);
-  cursor: url("../assets/branding-images/hovercursor.svg"), auto;
+  cursor:
+    url("../assets/branding-images/hovercursor.svg") 12 12,
+    auto;
   /* Useful for mobile tap interactions */
 }
 
@@ -659,6 +661,8 @@ a.nav-link-primary {
 }
 a.nav-link-primary-active {
   color: var(--color-nav-link-hover);
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
 }
 a.nav-link-primary-active:hover {
   color: var(--color-nav-link-hover);

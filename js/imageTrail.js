@@ -1,7 +1,8 @@
 const images = [
-  "./assets/project-1/birthday-1.png",
-  "./assets/project-1/birthday-2.png",
-  "./assets/project-1/birthday-3.png",
+  "./assets/project-1/guruguru.png",
+  "./assets/project-1/pompom.png",
+  "./assets/project-1/skully.png",
+  "./assets/project-1/eyebow.png",
 ];
 
 let lastUsedIndex = -1;
@@ -29,7 +30,7 @@ const isMobile = () =>
 // ─── Desktop: cursor trail ───────────────────────────────
 let lastX = null;
 let lastY = null;
-const spacing = 30;
+const spacing = 50;
 
 document.addEventListener("mousemove", (e) => {
   if (isMobile()) return;
