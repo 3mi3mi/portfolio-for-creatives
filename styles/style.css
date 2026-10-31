@@ -660,9 +660,11 @@ a.nav-link-primary {
   color: var(--color-nav-link);
 }
 a.nav-link-primary-active {
+  display: inline-block;
   color: var(--color-nav-link-hover);
   text-decoration: underline;
   text-underline-offset: 0.3rem;
+  transform: rotate(-8deg);
 }
 a.nav-link-primary-active:hover {
   color: var(--color-nav-link-hover);
