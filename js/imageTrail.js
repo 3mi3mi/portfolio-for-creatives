@@ -3,6 +3,7 @@ const images = [
   "./assets/project-1/pompom.png",
   "./assets/project-1/skully.png",
   "./assets/project-1/eyebow.png",
+  "./assets/project-1/webstickers.png",
 ];
 
 let lastUsedIndex = -1;
