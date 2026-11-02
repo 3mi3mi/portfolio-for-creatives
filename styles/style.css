@@ -156,12 +156,7 @@
   --color-bg-sidebar-project: #0e0e0f;
   --color-bg-sidebar-work: #0e0e0f;
   --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
-  --color-gradient-project-details: linear-gradient(
-    -225deg,
-    #ff057c 0%,
-    #8d0b93 50%,
-    #321575 100%
-  );
+  --color-gradient-project-details: linear-gradient(-225deg, #ff057c 0%, #8d0b93 50%, #321575 100%);
   /* Special Elements */
   --color-icon-heart: #ff5cc0;
   --color-text-holding-footer: #f8f8ff;
@@ -245,9 +240,7 @@ body {
 /* ------------------------------- */
 
 ::selection {
-  background: var(
-    --color-bg-selection
-  ); /* Uses your custom color for highlighted text */
+  background: var(--color-bg-selection); /* Uses your custom color for highlighted text */
 }
 
 /* ---------------------------------------- */
@@ -737,24 +730,31 @@ a.nav-link-primary:hover {
 /* -------------------------------------------------------------------------- */
 
 /* ─── Cursor trail ──────────────────────────────────────── */
-.trail-img {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  pointer-events: none;
-  transform: translate(-50%, 0);
-  z-index: -1;
-}
 
 .hero {
+  position: relative;
+  overflow: hidden;
   width: 100%;
-  min-height: 100vh; /* Takes up most of the screen height */
+  min-height: 100vh; /* Takes up the screen height */
   display: flex;
   flex-direction: column;
 }
+
 .hero-header {
+  position: relative;
+  z-index: 1;
   min-height: 6rem; /* Space reserved for logo + nav */
 }
+
+.trail-img {
+  position: absolute;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* End of Cursor trail */
 
 .nav-branding {
   display: flex;
@@ -830,9 +830,7 @@ a.nav-link-primary:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(
-    --color-bg-full-width
-  ); /* Background color for full-width sections */
+  background: var(--color-bg-full-width); /* Background color for full-width sections */
   margin-bottom: 1rem;
 }
 
@@ -893,9 +891,7 @@ a.nav-link-primary:hover {
 /* Work Sidebar on Mobile */
 .work-sidebar {
   width: 100%;
-  background: var(
-    --color-bg-sidebar-work
-  ); /* Background color for the sidebar */
+  background: var(--color-bg-sidebar-work); /* Background color for the sidebar */
 }
 
 /* Main Work Area with Sidebar on Mobile */
@@ -906,10 +902,7 @@ a.nav-link-primary:hover {
 /* Defining the work page grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Creates a responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates a responsive grid */
   grid-gap: 0.5rem; /* Space between grid items */
   /* The auto-fit and minmax() function help ensure responsiveness across screen sizes */
 }
@@ -981,9 +974,7 @@ a.nav-link-primary:hover {
   align-items: center;
   flex-direction: column;
   padding: var(--padding-small);
-  background-color: var(
-    --color-overlay-primary
-  ); /* Background color of the overlay */
+  background-color: var(--color-overlay-primary); /* Background color of the overlay */
   transition:
     opacity var(--duration-normal),
     visibility var(--duration-normal);
@@ -1281,9 +1272,7 @@ a.nav-link-primary:hover {
 .project-details {
   width: 100%;
   padding: var(--padding-small);
-  background: var(
-    --color-bg
-  ); /* TODO: Remove gradient background if you prefer a simpler design */
+  background: var(--color-bg); /* TODO: Remove gradient background if you prefer a simpler design */
 }
 
 /* Previous/Next Arrow Styles */
@@ -1389,9 +1378,7 @@ a.nav-link-primary:hover {
 
 .holding-page-copyright {
   font-size: 0.8rem; /* Smaller font size for copyright text */
-  color: var(
-    --color-text-holding-footer
-  ); /* Custom color for the footer text */
+  color: var(--color-text-holding-footer); /* Custom color for the footer text */
   margin-bottom: 0; /* Removes default margin from the bottom of the copyright text */
 }
 
