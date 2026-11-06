@@ -125,7 +125,7 @@
   /* Headings */
   --h1-color: #727272;
   --h2-color: #727272;
-  --h3-color: #727272;
+  --h3-color: #ababab;
   --h4-color: #727272;
   --h5-color: #ff5cc0;
   --h6-color: #727272;
@@ -143,7 +143,7 @@
   --color-link-visited: #ababab;
   /* Navigation */
   --color-nav-link: #ababab;
-  --color-nav-link-other: #ababab;
+  --color-nav-link-other: #f1ff8b;
   --color-nav-link-hover: #ff5cc0;
   --color-nav-link-active: var(--color-accent-secondary);
   --color-nav-arrow: #ff5cc0;
@@ -689,7 +689,7 @@ a.nav-link-other {
   text-decoration: underline;
 }
 a.nav-link-other:hover {
-  color: #84d2e0;
+  color: #ff5cc0;
   text-decoration: underline;
   filter: blur(1.5px);
   transition:
@@ -782,10 +782,17 @@ a.nav-link-primary:hover {
 
 .nav-branding {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  padding: var(--padding-small);
+  padding: var(--padding-tiny);
   align-items: flex-start;
+  background-color: rgba(
+    11,
+    11,
+    11,
+    0.8
+  ); /* Semi-transparent background for better readability */
+  border-bottom: 1px solid var(--color-accent-primary);
 }
 
 .nav-branding-group {
@@ -911,6 +918,7 @@ a.nav-link-primary:hover {
 .project-wrapper,
 .work-sidebar-wrapper {
   padding: var(--padding-tiny);
+  border-top: 1px solid var(--color-accent-primary);
   /* Padding to keep content from touching edges */
 }
 
@@ -985,7 +993,7 @@ a.nav-link-primary:hover {
 .project-container {
   background: var(--color-bg); /* Set project background color */
   padding: var(--padding-small);
-  border: 1px dashed var(--color-accent-primary);
+  border: 1px var(--color-accent-primary);
   border-radius: 5px;
   /* corner-shape: notch; */
 }
@@ -1587,7 +1595,7 @@ to keep your styles reusable and consistent.
   }
 
   .hero {
-    min-height: 70vh;
+    min-height: 95vh;
   }
 
   .hero-headline-wrapper {
