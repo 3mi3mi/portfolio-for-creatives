@@ -793,6 +793,8 @@ a.nav-link-primary:hover {
     0.8
   ); /* Semi-transparent background for better readability */
   border-bottom: 1px solid var(--color-accent-primary);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 
 .nav-branding-group {
