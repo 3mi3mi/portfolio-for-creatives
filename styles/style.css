@@ -109,9 +109,9 @@
   --font-family-heading: "Cossette Titre", sans-serif;
   --font-family-project-title: "Cossette Texte", serif;
   /* Core Colours */
-  --color-text-primary: #727272;
-  --color-text-secondary: #727272;
-  --color-accent-primary: #727272;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #ffffff;
+  --color-accent-primary: #ffffff;
   --color-accent-secondary: #ff5cc0;
   --color-overlay-primary: #ff5cc155;
   --color-highlight: lemonchiffon;
@@ -123,27 +123,27 @@
 
   --color-bg-holding-page: #ff5cc0;
   /* Headings */
-  --h1-color: #727272;
-  --h2-color: #727272;
-  --h3-color: #ababab;
-  --h4-color: #727272;
-  --h5-color: #ff5cc0;
-  --h6-color: #727272;
+  --h1-color: #ffffff;
+  --h2-color: #ffffff;
+  --h3-color: #ffff;
+  --h4-color: #ababab;
+  --h5-color: #ababab;
+  --h6-color: #ababab;
   /* Special Text Colours */
-  --color-text-holding-title: #727272;
-  --color-text-project-category: #727272;
-  --color-text-project-description: #727272;
-  --color-text-project-description-bright: #ababab;
-  --color-text-project-sidebar: #727272;
+  --color-text-holding-title: #ababab;
+  --color-text-project-category: #ababab;
+  --color-text-project-description: #ababab;
+  --color-text-project-description-bright: #ffff;
+  --color-text-project-sidebar: #ababab;
   --color-text-project-title: #ff5cc0;
-  --color-text-work-grid-title: #727272;
+  --color-text-work-grid-title: #ffff;
   /* Link States */
-  --color-link: #ababab;
+  --color-link: #ffff;
   --color-link-hover: #ff5cc0;
-  --color-link-visited: #ababab;
+  --color-link-visited: #ffff;
   /* Navigation */
-  --color-nav-link: #ababab;
-  --color-nav-link-other: #f1ff8b;
+  --color-nav-link: #ffff;
+  --color-nav-link-other: #ffff;
   --color-nav-link-hover: #ff5cc0;
   --color-nav-link-active: var(--color-accent-secondary);
   --color-nav-arrow: #ff5cc0;
@@ -591,13 +591,11 @@ sup {
 
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
-  font-size: 2rem;
+  font-size: 1.2rem;
   color: var(--color-text-work-grid-title);
   text-wrap: balance;
   font-weight: 700;
   margin-bottom: 0.2rem;
-  text-transform: uppercase;
-  letter-spacing: -0.02rem;
 }
 
 /* 🏷️ Project category label — displays the type or role of the project */
@@ -672,7 +670,6 @@ a.nav-link-primary-active {
   color: var(--color-nav-link-hover);
   text-decoration: underline;
   text-underline-offset: 0.3rem;
-  transform: rotate(-9deg);
   transition: transform 0.2s ease;
 }
 
@@ -942,8 +939,6 @@ a.nav-link-primary:hover {
     auto-fit,
     minmax(300px, 1fr)
   ); /* Creates a responsive grid */
-  grid-gap: 0.5rem; /* Space between grid items */
-  /* The auto-fit and minmax() function help ensure responsiveness across screen sizes */
 }
 /*tag item style*/
 .tag {
@@ -957,15 +952,14 @@ a.nav-link-primary:hover {
 }
 .work-tag {
   font-family: "Cossette Texte";
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0em;
   border-width: 1px;
-  border-style: dashed;
-  border-color: #727272;
+  border-style: solid;
+  border-color: #ababab;
   border-image: none;
-  padding: 7px 10px;
+  padding: 5px 10px;
   list-style-type: none;
   border-radius: 3px;
   /* corner-shape: notch; */
@@ -975,14 +969,15 @@ a.nav-link-primary:hover {
   flex-wrap: wrap;
   margin-bottom: 0rem;
   margin-top: 1rem;
-  gap: 8px;
+  gap: 4px;
 }
 /* Individual Work Grid Item */
 .work-page-grid-item,
 .overlay-container {
   width: 100%;
   height: auto;
-  position: relative; /* Needed to position the overlay */
+  position: relative;
+  border: 1px solid #00ffff; /* Needed to position the overlay */
 }
 /* Masonry Overlay Text */
 .overlay-container:hover .overlay {
@@ -992,7 +987,6 @@ a.nav-link-primary:hover {
 /* Project container for background and padding */
 .project-container {
   background: var(--color-bg); /* Set project background color */
-  padding: var(--padding-small);
   border: 1px var(--color-accent-primary);
   border-radius: 5px;
   /* corner-shape: notch; */
@@ -1119,9 +1113,12 @@ a.nav-link-primary:hover {
   grid-template-columns: 1fr; /* Single column layout */
   grid-gap: 3rem; /* Consistent spacing between sections */
   min-height: auto; /* Allows footer to expand based on content, no fixed height */
-  background: var(--color-bg-footer); /* Using CSS variable for theming */
+  background-image: linear-gradient(
+    to top,
+    var(--color-accent-secondary),
+    var(--color-bg-full-width)
+  );
   padding: var(--padding-small); /* Internal spacing */
-  border-top: 1px dashed var(--color-accent-primary);
 }
 
 /* Note: Using 'fr' units ensures proper scaling across devices */
@@ -1208,7 +1205,7 @@ a.nav-link-primary:hover {
 
 .footer-fineprint {
   font-size: 0.875rem; /* Slightly smaller for disclaimers or captions */
-  color: var(--color-text-secondary); /* Themed color */
+  color: var(--color-bg); /* Themed color */
 }
 
 /* New item badges */
@@ -1217,6 +1214,19 @@ a.nav-link-primary:hover {
   padding: 0.1rem;
   font-size: 0.8125rem;
   text-transform: uppercase;
+}
+.back-to-top-button {
+  font-family: "Cossette Texte";
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffff;
+  border-image: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: rgba(11, 11, 11, 0.8);
 }
 
 /* -------------------------------------------------------------------------- */
