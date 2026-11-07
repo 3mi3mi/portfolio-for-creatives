@@ -126,8 +126,8 @@
   --h1-color: #727272;
   --h2-color: #727272;
   --h3-color: #ababab;
-  --h4-color: #ababab;
-  --h5-color: #727272;
+  --h4-color: #727272;
+  --h5-color: #ff5cc0;
   --h6-color: #727272;
   /* Special Text Colours */
   --color-text-holding-title: #727272;
@@ -143,7 +143,7 @@
   --color-link-visited: #ababab;
   /* Navigation */
   --color-nav-link: #ababab;
-  --color-nav-link-other: #ababab;
+  --color-nav-link-other: #f1ff8b;
   --color-nav-link-hover: #ff5cc0;
   --color-nav-link-active: var(--color-accent-secondary);
   --color-nav-arrow: #ff5cc0;
@@ -179,8 +179,7 @@
   --radius-lg: 2rem; /* Large decorative elements */
   --radius-full: 50%; /* Circles/pills */
   /* Padding Scale */
-  --padding-tiny: 0.2rem; /* Micro-spacing: icon padding, toggle switches */
-  --padding-smaller: 0.5rem; /* Smaller compact spacing: mobile buttons, form tags */
+  --padding-tiny: 0.5rem; /* Micro-spacing: icon padding, toggle switches */
   --padding-small: 1rem; /* Compact spacing: mobile buttons, form tags */
   --padding-medium: 2rem; /* Standard spacing: desktop buttons, card content */
   --padding-large: 3rem; /* Section spacing: content blocks, banner padding */
@@ -195,7 +194,7 @@
   --gap-ultra: 8rem; /* Edge-to-edge spacing: mega sections, spacious layouts */
 }
 
-/* ====================== 
+/* ======================
    #BASE STYLES
    ====================== */
 
@@ -592,7 +591,7 @@ sup {
 
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #ababab;
   text-wrap: balance;
   margin-bottom: 0.2rem;
@@ -769,7 +768,6 @@ a.nav-link-primary:hover {
   position: sticky;
   top: 0;
   z-index: 1000;
-  min-height: 100vh;
   /* Space reserved for logo + nav */
 }
 
@@ -787,7 +785,7 @@ a.nav-link-primary:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: var(--padding-small);
+  padding: var(--padding-tiny);
   align-items: flex-start;
   background-color: rgba(
     11,
@@ -806,7 +804,6 @@ a.nav-link-primary:hover {
 .nav-branding-group {
   display: flex;
   flex-direction: row;
-  gap: var(--gap-smaller);
 }
 .nav-branding-item {
   padding: var(--padding-tiny);
@@ -822,9 +819,11 @@ a.nav-link-primary:hover {
   display: flex;
   flex-direction: column;
   flex: 1;
-  align-items: flex-start;
-  justify-content: flex-end;
-  text-align: left;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-small);
+  text-align: center; /* Keeps text centered */
 }
 
 .hero-icon {
@@ -918,8 +917,6 @@ a.nav-link-primary:hover {
 /* Work wrapper (takes up available space) */
 .main-work-section {
   flex: 1;
-  border-top: 1px solid var(--color-accent-primary);
-  padding-top: var(--padding-small);
 }
 
 /* Padding around work grid and project page */
@@ -951,7 +948,7 @@ a.nav-link-primary:hover {
     auto-fit,
     minmax(300px, 1fr)
   ); /* Creates a responsive grid */
-  grid-gap: 0rem; /* Space between grid items */
+  grid-gap: 0.5rem; /* Space between grid items */
   /* The auto-fit and minmax() function help ensure responsiveness across screen sizes */
 }
 /*tag item style*/
@@ -966,13 +963,15 @@ a.nav-link-primary:hover {
 }
 .work-tag {
   font-family: "Cossette Texte";
-  font-size: 12px;
-  font-weight: 300;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   border-width: 1px;
   border-style: solid;
   border-color: #727272;
   border-image: none;
-  padding: 5px 10px;
+  padding: 7px 10px;
   list-style-type: none;
   border-radius: 4px;
   /* corner-shape: notch; */
@@ -999,7 +998,7 @@ a.nav-link-primary:hover {
 /* Project container for background and padding */
 .project-container {
   background: var(--color-bg); /* Set project background color */
-  padding: var(--padding-tiny);
+  padding: var(--padding-small);
   border: 1px var(--color-accent-primary);
   border-radius: 5px;
   /* corner-shape: notch; */
@@ -1607,9 +1606,9 @@ to keep your styles reusable and consistent.
   }
 
   .hero-headline-wrapper {
-    padding-top: var(--padding-medium);
+    padding-top: var(--padding-jumbo);
     padding-bottom: var(--padding-jumbo);
-    padding-left: var(--padding-small);
+    padding-left: var(--padding-ultra);
     padding-right: var(--padding-ultra);
   }
   .error-headline-wrapper {
@@ -1627,7 +1626,7 @@ to keep your styles reusable and consistent.
 
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 0.7rem;
+    grid-gap: 1rem;
   }
 
   /* Grayscale filter with full-colour on hover and tap */
