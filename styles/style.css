@@ -262,7 +262,6 @@ svg {
   height: auto; /* Keeps the image’s original proportions */
   vertical-align: top; /* Removes little gaps under images (from line-height) */
   object-fit: cover;
-  border-radius: 4px; /* Optional: Adds rounded corners to images */
   /* Optional: Makes sure the whole image fits inside its box */
   /* Try 'cover' if you want it to fill the space, or remove this line if not needed */
 }
@@ -585,6 +584,7 @@ sup {
 
 .highlight-gradient {
   background: var(--color-gradient-hero);
+  -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
 }
@@ -592,9 +592,11 @@ sup {
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
   font-size: 2rem;
-  color: #ababab;
+  color: var(--color-text-work-grid-title);
   text-wrap: balance;
+  font-weight: 700;
   margin-bottom: 0.2rem;
+  text-transform: uppercase;
   letter-spacing: -0.02rem;
 }
 
@@ -765,9 +767,6 @@ a.nav-link-primary:hover {
   position: relative;
   z-index: 1;
   min-height: 6rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   /* Space reserved for logo + nav */
 }
 
@@ -793,8 +792,8 @@ a.nav-link-primary:hover {
     11,
     0.8
   ); /* Semi-transparent background for better readability */
-  border-bottom: 1px solid var(--color-accent-primary);
-  backdrop-filter: blur(2px);
+  border-bottom: 6px double var(--color-accent-primary);
+  backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   position: sticky;
   top: 0;
@@ -923,9 +922,9 @@ a.nav-link-primary:hover {
 .portfolio,
 .project-wrapper,
 .work-sidebar-wrapper {
-  padding: var(
-    --padding-tiny
-  ); /* Padding to keep content from touching edges */
+  padding: var(--padding-tiny);
+  border-top: 1px solid var(--color-accent-primary);
+  /* Padding to keep content from touching edges */
 }
 
 /* Work Sidebar on Mobile */
@@ -968,12 +967,12 @@ a.nav-link-primary:hover {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border-width: 1px;
-  border-style: solid;
+  border-style: dashed;
   border-color: #727272;
   border-image: none;
   padding: 7px 10px;
   list-style-type: none;
-  border-radius: 4px;
+  border-radius: 3px;
   /* corner-shape: notch; */
 }
 .tag-list {
@@ -981,7 +980,7 @@ a.nav-link-primary:hover {
   flex-wrap: wrap;
   margin-bottom: 0rem;
   margin-top: 1rem;
-  gap: 4px;
+  gap: 8px;
 }
 /* Individual Work Grid Item */
 .work-page-grid-item,
@@ -1313,8 +1312,7 @@ a.nav-link-primary:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0rem;
-  border-radius: 30px;
+  margin-bottom: 1rem;
 }
 /* Project details section */
 .project-details {
