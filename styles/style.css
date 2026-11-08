@@ -501,7 +501,6 @@ h5 {
   margin-top: 0.7rem;
   color: var(--h5-color);
   text-transform: uppercase;
-  font-weight: bold; /* optional: adjust weight */
 }
 
 h6 {
@@ -575,6 +574,13 @@ sup {
 .h2-full-width {
   width: 100%;
   padding: var(--padding-small);
+}
+
+.nav-branding-non-link {
+  font-size: 0.9rem;
+  line-height: 1.2;
+  margin-bottom: 0rem;
+  color: #777676;
 }
 
 /* ✨ Highlighted text — great for emphasis */
@@ -675,7 +681,7 @@ a.nav-link-primary-active {
 
 a.nav-link-primary-active:hover {
   color: var(--color-nav-link-hover);
-  filter: blur(1.5px);
+  filter: blur(2px);
   transition:
     filter 0.3s ease,
     transform 0.3s ease;
@@ -688,7 +694,7 @@ a.nav-link-other {
 a.nav-link-other:hover {
   color: #ff5cc0;
   text-decoration: underline;
-  filter: blur(1.5px);
+  filter: blur(2px);
   transition:
     filter 0.3s ease,
     transform 0.3s ease;
@@ -783,13 +789,11 @@ a.nav-link-primary:hover {
   justify-content: space-between;
   padding: var(--padding-tiny);
   align-items: flex-start;
-  background-color: rgba(
-    11,
-    11,
-    11,
-    0.8
+  background-color: rgba(11, 11, 11, 0.3);
+  backdrop-filter: blur(
+    8px
   ); /* Semi-transparent background for better readability */
-  border-bottom: 1px solid var(--color-accent-primary);
+  border-bottom: 2px solid var(--color-bg-about);
 }
 
 .nav-branding-group {
@@ -811,10 +815,10 @@ a.nav-link-primary:hover {
   flex-direction: column;
   flex: 1;
   gap: 3rem;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-end;
   padding: var(--padding-small);
-  text-align: center; /* Keeps text centered */
+  text-align: left; /* Keeps text centered */
 }
 
 .hero-icon {
@@ -952,7 +956,7 @@ a.nav-link-primary:hover {
 }
 .work-tag {
   font-family: "Cossette Texte";
-  font-size: 12px;
+  font-size: 0.7rem;
   font-weight: 300;
   letter-spacing: 0em;
   border-width: 1px;
@@ -1138,7 +1142,7 @@ a.nav-link-primary:hover {
 }
 .footer-contact-social {
   grid-column: 1 / 2;
-  grid-row: 3 / 4;
+  grid-row: 1 / 2;
 }
 /* -------------------------------------------------------------------------- */
 /* 🌊 FULL-WIDTH BOTTOM SECTION                                               */
@@ -1226,7 +1230,8 @@ a.nav-link-primary:hover {
   border-image: none;
   padding: 5px 10px;
   border-radius: 3px;
-  background-color: rgba(11, 11, 11, 0.8);
+  background-color: rgba(11, 11, 11, 0.3);
+  backdrop-filter: blur(8px);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -1317,7 +1322,7 @@ a.nav-link-primary:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 /* Project details section */
 .project-details {
@@ -1750,7 +1755,7 @@ to keep your styles reusable and consistent.
   /* Column 3: Contact & Social */
   .footer-contact-social {
     grid-row: 1 / 2;
-    grid-column: 3 / 4;
+    grid-column: 1 / 2;
   }
 
   /* ------------------------------- */
