@@ -1,8 +1,17 @@
 // CUSTOMIZE THESE
 
-const images = ["./assets/project-1/guruguru.png", "./assets/project-1/pompom.png", "./assets/project-1/skully.png", "./assets/project-1/eyebow.png", "./assets/project-1/webstickers.png"];
+const images = [
+  "./assets/project-1/guruguru.png",
+  "./assets/project-1/pompom.png",
+  "./assets/project-1/skully.png",
+  "./assets/project-1/eyebow.png",
+  "./assets/project-1/webstickers.png",
+  "./assets/project-1/ika.png",
+  "./assets/project-1/skulltwin.png",
+  "./assets/project-1/speaker.png",
+];
 
-const spacing = 40; // Distance between images on desktop
+const spacing = 60; // Distance between images on desktop
 const maxImages = 200; // Maximum number of images on screen
 const imageSize = 80; // Maximum image width and height in pixels
 
@@ -59,7 +68,8 @@ if (hero) {
   }
 
   // Detect touch-based devices
-  const isMobile = () => window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+  const isMobile = () =>
+    window.matchMedia("(hover: none) and (pointer: coarse)").matches;
 
   // Desktop: cursor trail
   let lastX = null;

@@ -114,7 +114,7 @@
   --color-accent-primary: #ffffff;
   --color-accent-secondary: #ff5cc0;
   --color-overlay-primary: #ff5cc155;
-  --color-highlight: lemonchiffon;
+  --color-highlight: ffffff;
   --color-fallback: #ff5cc0; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
   --color-bg: #0b0b0b;
@@ -145,7 +145,7 @@
   --color-nav-link: #ffff;
   --color-nav-link-other: #ffff;
   --color-nav-link-hover: #ff5cc0;
-  --color-nav-link-active: var(--color-accent-secondary);
+  --color-nav-link-active: ffffff;
   --color-nav-arrow: #ff5cc0;
   --color-nav-arrow-hover: #000;
   --color-nav-arrow-stroke: #ff5cc0;
@@ -543,7 +543,6 @@ sup {
 
 /* Main hero headline — usually sits in the intro section */
 .hero-headline {
-  color: var(--color-accent-primary); /* Uses your brand's dominant color */
   max-width: 40ch; /* Optimal line length for readability (~40 characters) */
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: 0 auto; /* Horizontally centers the text in its container */
@@ -626,7 +625,7 @@ sup {
 ██   ██    ██    ██      ██      ██   ██ ██      ██ ██  ██ ██ ██  ██       ██ 
 ██   ██    ██    ██      ███████ ██   ██ ███████ ██ ██   ████ ██   ██ ███████ 
 
-*/
+
 
 /* -------------------------------------------------------------------------- */
 /* 🔗 Hyperlink Styles — LVHFA                                                */
@@ -634,15 +633,20 @@ sup {
 /* These are the five main states a hyperlink can be in                       */
 /* -------------------------------------------------------------------------- */
 
-/* Unvisited link */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
 a:link {
-  color: var(--color-link);
+  color: #ffffff;
   text-decoration: none; /* Removes underline */
 }
 
 /* Visited link — after a user clicks and returns */
 a:visited {
-  color: var(--color-link-visited);
+  color: #ffffff;
+  text-decoration: none;
 }
 
 /* Hover — when a user hovers their mouse over the link */
@@ -674,6 +678,7 @@ a:active {
 
 a.nav-link-primary {
   color: var(--color-nav-link);
+  text-decoration: none;
 }
 a.nav-link-primary-active {
   display: inline-block;
@@ -828,6 +833,15 @@ a.nav-link-primary:hover {
   border: 2px solid var(--color-bg-about);
   margin-bottom: 1rem;
 }
+.new-hero-headline-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding-left: 1.2rem;
+  align-items: flex-start;
+  margin-top: auto;
+  width: 45vw;
+  min-width: 300px;
+}
 
 .hero-icon {
   font-size: 4rem;
@@ -887,15 +901,6 @@ a.nav-link-primary:hover {
   text-align: center; /* Keeps the text centered */
 }
 
-.new-hero-headline-wrapper {
-  display: flex;
-  flex-direction: row;
-  padding-left: 1.2rem;
-  align-items: flex-start;
-  margin-top: auto;
-  width: 60vw;
-  min-width: 300px;
-}
 .section-container {
   width: 100%;
   display: flex;
