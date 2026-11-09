@@ -30,12 +30,13 @@
      - `backface-visibility` fixes flickering on some browsers
   */
 .masonry-item img {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.1s linear;
   backface-visibility: hidden;
 }
 
 .masonry-item:hover img {
   opacity: 1;
+  filter: blur(4px);
 }
 
 /* 📱 Masonry layout for tablets

@@ -546,7 +546,7 @@ sup {
   color: var(--color-accent-primary); /* Uses your brand's dominant color */
   max-width: 40ch; /* Optimal line length for readability (~40 characters) */
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
-  margin-inline: auto; /* Horizontally centers the text in its container */
+  margin-inline: 0 auto; /* Horizontally centers the text in its container */
 }
 
 /* Large project title — appears on individual project pages */
@@ -614,7 +614,11 @@ sup {
   margin-top: 0.3rem;
   font-style: italic;
 }
-/*
+
+.extra-dark-text {
+  color: #616060;
+  margin-bottom: 0.5rem;
+}
 
 ██   ██ ██    ██ ██████  ███████ ██████  ██      ██ ███    ██ ██   ██ ███████ 
 ██   ██  ██  ██  ██   ██ ██      ██   ██ ██      ██ ████   ██ ██  ██  ██      
@@ -762,7 +766,7 @@ a.nav-link-primary:hover {
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 100vh; /* Takes up the screen height */
+  min-height: 20vh; /* Takes up the screen height */
   display: flex;
   flex-direction: column;
 }
@@ -770,7 +774,9 @@ a.nav-link-primary:hover {
 .hero-header {
   position: relative;
   z-index: 1;
-  min-height: 6rem; /* Space reserved for logo + nav */
+  min-height: 90vh; /* Space reserved for logo + nav */
+  display: flex;
+  flex-direction: column;
 }
 
 .trail-img {
@@ -810,15 +816,17 @@ a.nav-link-primary:hover {
 }
 
 .hero-headline-wrapper {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  flex: 1;
-  gap: 3rem;
   align-items: flex-start;
-  justify-content: flex-end;
-  padding: var(--padding-small);
-  text-align: left; /* Keeps text centered */
+  width: fit-content;
+  margin-top: auto;
+  padding: var(--padding-tiny);
+  text-align: left;
+  background-color: rgba(11, 11, 11, 0.3);
+  backdrop-filter: blur(8px);
+  border: 2px solid var(--color-bg-about);
+  margin-bottom: 1rem;
 }
 
 .hero-icon {
@@ -879,6 +887,15 @@ a.nav-link-primary:hover {
   text-align: center; /* Keeps the text centered */
 }
 
+.new-hero-headline-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding-left: 1.2rem;
+  align-items: flex-start;
+  margin-top: auto;
+  width: 60vw;
+  min-width: 300px;
+}
 .section-container {
   width: 100%;
   display: flex;
@@ -908,7 +925,37 @@ a.nav-link-primary:hover {
 /* These styles create the layout for your work portfolio and project pages    */
 /* The goal is to showcase your projects and provide a responsive, clean UI  */
 /* -------------------------------------------------------------------------- */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 1rem 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #ababab;
+}
 
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
+}
+
+.marquee-track span {
+  flex-shrink: 0;
+  padding-right: 0.3rem;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 /* Work wrapper (takes up available space) */
 .main-work-section {
   flex: 1;
@@ -919,7 +966,6 @@ a.nav-link-primary:hover {
 .project-wrapper,
 .work-sidebar-wrapper {
   padding: var(--padding-tiny);
-  border-top: 1px solid var(--color-accent-primary);
   /* Padding to keep content from touching edges */
 }
 
@@ -939,10 +985,8 @@ a.nav-link-primary:hover {
 /* Defining the work page grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Creates a responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem; /* Creates a responsive grid */
 }
 /*tag item style*/
 .tag {
@@ -1490,10 +1534,6 @@ Use this section to style elements that are *unique to the Play page*.
 For common layout or effects, continue using the base utility classes
 to keep your styles reusable and consistent.
 */
-
-.play-page {
-  /* Add page-specific layout or container styles here */
-}
 
 /*
 
