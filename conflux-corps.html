@@ -35,31 +35,42 @@
 
   <body class="project-1">
     <header class="hero-header">
-       <ul class="nav-branding">
-          <!-- Logo (standalone LI) -->
-          <li class="nav-branding-logo">
-            <a href="index.html">
-              <img
-                src="assets/branding-images/logo.svg"
-                alt="Your portfolio logo"
-              />
-            </a>
-          </li>
-          <li class="nav-branding-item">
-            <ul class="nav-branding-group">
-               <li class="nav-branding-item">
-                <a href="index.html".html" class="nav-link-primary">Work</a>
-              </li>
-              <li class="nav-branding-item">
-                <a href="archive.html".html" class="nav-link-primary">Archive</a>
-              </li>
-              <li class="nav-branding-item">
-                <a href="about.html" class="nav-link-primary">About</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-    </header>
+          <ul class="nav-branding">
+            <!-- Logo (standalone LI) -->
+            <li class="nav-branding-item">
+              <ul class="nav-branding-group">
+                <li class="nav-branding-item">
+                  <a href="index.html" class="nav-link-primary"
+                    >emilynlai.online</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-branding-item">
+              <ul class="nav-branding-group">
+                <li class="nav-branding-item">
+                  <a href="index.html" class="nav-link-primary">Work</a>
+                </li>
+                <li class="nav-branding-item">
+                  <a href="archive.html" class="nav-link-primary">Archive</a>
+                </li>
+                <li class="nav-branding-item">
+                  <a href="about.html" class="nav-link-primary">About</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-branding-item">
+              <ul class="nav-branding-group">
+                <li class="nav-branding-item">
+                  <div class="timezone-clock">
+                    <span>(YVR)</span>
+                    <time id="local-time">00:00:00 AM</time>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </header>
     <div class="project-wrapper">
       <aside class="project-aside">
         <div class="project-info">
@@ -280,6 +291,24 @@
       };
 
       window.addEventListener("scroll", myScrollFunc);
+    </script>
+    <script>
+      function updateClock() {
+        const now = new Date();
+
+        const time = new Intl.DateTimeFormat("en-US", {
+          timeZone: "America/Vancouver",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+        }).format(now);
+
+        document.getElementById("local-time").textContent = time;
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
     </script>
   </body>
 </html>
