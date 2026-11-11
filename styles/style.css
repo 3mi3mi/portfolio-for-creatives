@@ -797,7 +797,8 @@ a.nav-link-primary:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: var(--padding-tiny);
+  padding-left: var(--padding-tiny);
+  padding-right: var(--padding-tiny);
   align-items: flex-start;
   background-color: rgba(11, 11, 11, 0.3);
   backdrop-filter: blur(
@@ -817,6 +818,17 @@ a.nav-link-primary:hover {
 .nav-branding-logo {
   width: 7rem;
   /* TODO: Adjust the width of the logo on mobile devices here */
+}
+.timezone-clock {
+  display: inline-flex;
+  align-items: end;
+  justify-content: right;
+  gap: 0.7rem;
+  font-size: 1rem;
+  color: #727272;
+  white-space: nowrap;
+  min-width: 8rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .hero-headline-wrapper {
@@ -839,13 +851,13 @@ a.nav-link-primary:hover {
   align-items: flex-start;
   margin-top: auto;
   margin-left: 1rem;
-  width: 45vw;
+  width: 40vw;
   min-width: 300px;
   background-color: rgba(11, 11, 11, 0.3);
   backdrop-filter: blur(8px);
   padding-top: 1rem;
   border: 1px solid #727272;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
 }
 
 .hero-icon {
@@ -956,6 +968,7 @@ a.nav-link-primary:hover {
 .marquee-track span {
   flex-shrink: 0;
   padding-right: 0.3rem;
+  transition: animation-duration 1s ease-in-out;
 }
 
 @keyframes marquee-scroll {
@@ -965,6 +978,9 @@ a.nav-link-primary:hover {
   to {
     transform: translateX(-50%);
   }
+}
+.marquee:hover .marquee-track {
+  animation-duration: 7s;
 }
 /* Work wrapper (takes up available space) */
 .main-work-section {

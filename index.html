@@ -59,13 +59,23 @@
               </li>
             </ul>
           </li>
+          <li class="nav-branding-item">
+            <ul class="nav-branding-group">
+              <li class="nav-branding-item">
+                <div class="timezone-clock">
+                  <span>(YVR)</span>
+                  <time id="local-time">00:00:00 am</time>
+                </div>
+              </li>
+            </ul>
+          </li>
         </ul>
         <div class="new-hero-headline-wrapper">
           <ul>
             <h3 class="hero-headline">
-              <strong>Emilyn Lai</strong> is a designer & illustrator focusing
-              on branding, expressive graphics, and creating thrilling
-              experiences through visual communication.
+              <strong>Emilyn Lai</strong> is a designer & illustrator with a
+              passion for creating <strong>thrilling</strong> experiences
+              through visual communication.
             </h3>
           </ul>
         </div>
@@ -74,10 +84,14 @@
     <main class="main-work-section">
       <div class="marquee">
         <div class="marquee-track">
-          <span> (selected works) </span>
+          <span> / selected works / ↓↓ </span>
           <span aria-hidden="true"
-            >𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵❤︎⁠𓏵</span
-          >
+            >/ selected works / ↓↓ / selected works / ↓↓ / selected works / ↓↓ /
+            selected works / ↓↓ / selected works / ↓↓ / selected works / ↓↓ /
+            selected works / ↓↓ / selected works / ↓↓ / selected works / ↓↓ /
+            selected works / ↓↓ / selected works / ↓↓ / selected works / ↓↓ /
+            selected works / ↓↓
+          </span>
         </div>
       </div>
       <section class="portfolio">
@@ -273,5 +287,23 @@
       window.addEventListener("scroll", myScrollFunc);
     </script>
     <script src="js/imageTrail.js"></script>
+    <script>
+      function updateClock() {
+        const now = new Date();
+
+        const time = new Intl.DateTimeFormat("en-US", {
+          timeZone: "America/Vancouver",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+        }).format(now);
+
+        document.getElementById("local-time").textContent = time;
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
+    </script>
   </body>
 </html>
