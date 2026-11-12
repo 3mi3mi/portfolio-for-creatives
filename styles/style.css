@@ -32,13 +32,10 @@
 /* TODO: Replace these Google Fonts with the ones you want to use on your site. */
 /* Remember, the more fonts you load, the longer it can take for your page to load. */
 
-/* League Gothic Font (for headers or special text) */
 @import url("https://fonts.googleapis.com/css2?family=Cossette+Titre:wght@400;700&display=swap");
 
-/* Rubik Font (clean and modern for body text) */
 @import url("https://fonts.googleapis.com/css2?family=Cossette+Texte:wght@400;700&display=swap");
 
-/* Inter Font (great for readability and minimal design) */
 @import url("https://fonts.googleapis.com/css2?family=Cossette+Texte:wght@400;700&display=swap");
 
 /*
@@ -479,7 +476,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.325rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   line-height: 1.2;
   color: var(--h3-color);
@@ -679,11 +676,17 @@ a:active {
 a.nav-link-primary {
   color: var(--color-nav-link);
   text-decoration: none;
+  display: inline-block;
+  transform-origin: center;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 a.nav-link-primary-active {
   display: inline-block;
   color: var(--color-nav-link-hover);
   transition: transform 0.2s ease;
+  display: inline-block;
+  transform-origin: center;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 a.nav-link-primary-active:hover {
@@ -692,11 +695,15 @@ a.nav-link-primary-active:hover {
   transition:
     filter 0.3s ease,
     transform 0.3s ease;
+  transform: rotate(-12.5deg) scale(1.15);
 }
 
 a.nav-link-other {
   color: var(--color-nav-link-other);
   text-decoration: underline;
+  display: inline-block;
+  transform-origin: center;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 a.nav-link-other:hover {
   color: #ff5cc0;
@@ -705,6 +712,7 @@ a.nav-link-other:hover {
   transition:
     filter 0.3s ease,
     transform 0.3s ease;
+  transform: rotate(-12.5deg) scale(1.15);
 }
 a.nav-link-primary:hover {
   color: var(--color-nav-link-hover);
@@ -712,6 +720,7 @@ a.nav-link-primary:hover {
   transition:
     filter 0.2s ease,
     transform 0.2s ease;
+  transform: rotate(-12.5deg) scale(1.15);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -800,12 +809,10 @@ a.nav-link-primary:hover {
   justify-content: space-between;
   padding-left: var(--padding-tiny);
   padding-right: var(--padding-tiny);
-  align-items: flex-start;
-  background-color: rgba(11, 11, 11, 0.4);
-  backdrop-filter: blur(
-    8px
-  ); /* Semi-transparent background for better readability */
-  border-bottom: 1px solid #727272;
+  align-items: flex-start; /* Semi-transparent background for better readability */
+  border-bottom: 1px solid rgba(114, 114, 114, 0.7);
+  background: rgba(11, 11, 11, 0.3);
+  backdrop-filter: blur(8px);
 }
 
 .nav-branding-group {
@@ -814,6 +821,7 @@ a.nav-link-primary:hover {
 }
 .nav-branding-item {
   padding: var(--padding-tiny);
+  font-size: 0.9rem;
 }
 
 .nav-branding-logo {
@@ -825,7 +833,7 @@ a.nav-link-primary:hover {
   align-items: end;
   justify-content: right;
   gap: 0.3rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #fff;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
@@ -976,10 +984,10 @@ a.nav-link-primary:hover {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  padding: 1rem 0;
+  padding: 0.7rem 0;
   border-top: 1px solid;
   border-bottom: 1px solid;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   margin-bottom: 0rem;
   mix-blend-mode: difference;
   color: #727272;
