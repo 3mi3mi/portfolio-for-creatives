@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>(archive) ⇠</title>
+    <title>Archive — Emilyn Lai</title>
     <meta
       name="description"
       content="When writing a meta description, keep it between 140 and 160 characters so Google can display your entire message. Don’t forget to include your keyword!"
@@ -36,40 +36,44 @@
   </head>
 
   <body class="play-page">
-    <section class="hero">
-      <header class="hero-header">
-        <ul class="nav-branding">
-          <!-- Logo (standalone LI) -->
-          <li class="nav-branding-item">
-            <ul class="nav-branding-group">
-              <li class="nav-branding-item">
-                <a href="index.html" class="nav-link-primary"
-                  >emilynlai.online</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="nav-branding-item">
-            <ul class="nav-branding-group">
-              <li class="nav-branding-item">
-                <a href="index.html" class="nav-link-primary">Work</a>
-              </li>
-              <li class="nav-branding-item">
-                <a href="archive.html" class="nav-link-primary-active"
-                  >Archive</a
-                >
-              </li>
-              <li class="nav-branding-item">
-                <a href="about.html" class="nav-link-primary">About</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </header>
-    </section>
+    <header class="hero-header">
+      <ul class="nav-branding">
+        <!-- Logo (standalone LI) -->
+        <li class="nav-branding-item">
+          <ul class="nav-branding-group">
+            <li class="nav-branding-item">
+              <a href="index.html" class="nav-link-primary">emilynlai.online</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-branding-item">
+          <ul class="nav-branding-group">
+            <li class="nav-branding-item">
+              <a href="index.html" class="nav-link-primary">Work</a>
+            </li>
+            <li class="nav-branding-item">
+              <a href="archive.html" class="nav-link-primary-active">Archive</a>
+            </li>
+            <li class="nav-branding-item">
+              <a href="about.html" class="nav-link-primary">About</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-branding-item">
+          <ul class="nav-branding-group">
+            <li class="nav-branding-item">
+              <div class="timezone-clock">
+                <span>(YVR)</span>
+                <time id="local-time">00:00:00 am</time>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
     <main class="main-work-section">
       <section class="portfolio">
-        <ul class="masonry-grid padding-tiny">
+        <ul class="masonry-grid">
           <li class="masonry-item">
             <a
               href="assets/temp/posterigideatalks2.png"
@@ -234,27 +238,6 @@
           </li>
         </ul>
       </section>
-      <section class="full-width-section">
-        <div class="full-width-headline-wrapper">
-          <h1 class="h1-full-width">🍨 Finally, dessert:</h1>
-          <h2 class="h2-full-width">The Playground page</h2>
-          <p class="max-text-width">
-            A Playground page is often a scattered grid of half-finished
-            projects, random ideas, personal experiments, and rejected work we
-            don’t usually get to see in a polished portfolio. It’s the space
-            where the rules don’t apply—you don’t need to fit a brief, explain
-            your process, or curate what stays and what goes.
-          </p>
-          <p class="max-text-width">This is the low-pressure zone.</p>
-          <p class="max-text-width">
-            If you’re feeling unsure about sharing your work, start with a Play
-            page.
-          </p>
-          <p class="max-text-width">
-            It’s a space for dreams and ideas still finding their footing.
-          </p>
-        </div>
-      </section>
     </main>
 
     <ul class="footer-global">
@@ -291,20 +274,42 @@
           <li class="footer-item"><a href="#">Behance</a></li>
         </ul>
       </li>
-
-      <li class="footer-full-width">
-        <p><a href="#top">Smooth scroll to the top</a></p>
-        <p class="footer-fineprint">
-          &copy; <span id="copyright-years">2020-</span>. Hand crafted with
-          <span class="heart">❤</span>
-          by James Neufeld.
-        </p>
-        <script>
-          document.getElementById("copyright-years").textContent +=
-            new Date().getFullYear();
-        </script>
-      </li>
+      <div id="myID" class="bottomMenu hide">
+        <a href="#" class="back-to-top-button">⇈ nowhere to go but up</a>
+      </div>
     </ul>
+    <script>
+      myID = document.getElementById("myID");
+
+      var myScrollFunc = function () {
+        var y = window.scrollY;
+        if (y >= 800) {
+          myID.className = "bottomMenu show";
+        } else {
+          myID.className = "bottomMenu hide";
+        }
+      };
+
+      window.addEventListener("scroll", myScrollFunc);
+    </script>
     <script src="./lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+    <script>
+      function updateClock() {
+        const now = new Date();
+
+        const time = new Intl.DateTimeFormat("en-US", {
+          timeZone: "America/Vancouver",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+        }).format(now);
+
+        document.getElementById("local-time").textContent = time;
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
+    </script>
   </body>
 </html>
