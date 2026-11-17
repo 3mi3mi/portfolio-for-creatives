@@ -38,6 +38,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Cossette+Texte:wght@400;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap");
 /*
 
 /* 
@@ -103,7 +104,7 @@
 :root {
   /* Typography */
   --font-family-body: "Cossette Texte", sans-serif;
-  --font-family-heading: "Cossette Titre", sans-serif;
+  --font-family-heading: "Cossette Texte", sans-serif;
   --font-family-project-title: "Cossette Texte", serif;
   /* Core Colours */
   --color-text-primary: #ffffff;
@@ -121,7 +122,7 @@
   --color-bg-holding-page: #ff5cc0;
   /* Headings */
   --h1-color: #ffffff;
-  --h2-color: #ffffff;
+  --h2-color: #727272;
   --h3-color: #ffff;
   --h4-color: #ababab;
   --h5-color: #ababab;
@@ -234,7 +235,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: 3rem; /* Adds space at the top for fixed headers or navbars */
+  padding-top: 2.3rem; /* Adds space at the top for fixed headers or navbars */
 }
 
 /* ------------------------------- */
@@ -464,15 +465,17 @@ h1 {
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h1-color);
+  letter-spacing: -0.03rem;
+  font-weight: normal;
 }
 
 h2 {
   font-size: 4rem;
   font-family: var(--font-family-heading);
-  line-height: 1.2;
+  line-height: 1;
   margin-bottom: 1rem;
   color: var(--h2-color);
-  letter-spacing: 0rem;
+  letter-spacing: -0.12rem;
 }
 
 h3 {
@@ -484,7 +487,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h4-color);
@@ -592,7 +595,7 @@ sup {
 
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--color-text-work-grid-title);
   text-wrap: balance;
   font-weight: 700;
@@ -603,6 +606,9 @@ sup {
 .work-grid-project-category {
   color: var(--color-text-project-category);
   margin-bottom: 0.1rem;
+  margin-top: 0rem;
+  font-family: var(--font-family-body);
+  text-transform: lowercase;
 }
 
 /*for paragraph text under links*/
@@ -616,6 +622,40 @@ sup {
   margin-bottom: 0.5rem;
 }
 
+.symbol-arrow {
+  font-family: "Noto Sans Symbols 2", sans-serif;
+  font-size: 1.3rem;
+}
+.symbol {
+  font-family: "Noto Sans Symbols 2", sans-serif;
+}
+.framed-text {
+  display: flex;
+  align-items: flex-start;
+  width: 25vw;
+  padding: 1rem 0 0 1.2rem;
+  background: rgba(11, 11, 11, 0.3);
+  backdrop-filter: blur(8px);
+  border: 1px solid #727272;
+  z-index: 1;
+  box-sizing: border-box;
+  mix-blend-mode: difference;
+  margin-top: 2rem;
+}
+.framed-text-footer {
+  display: flex;
+  align-items: flex-start;
+  width: 35vw;
+  min-width: 200px;
+  padding: 1rem 0 0 1.2rem;
+  background: rgba(11, 11, 11, 0.3);
+  backdrop-filter: blur(8px);
+  border: 1px solid #727272;
+  z-index: 1;
+  box-sizing: border-box;
+  mix-blend-mode: difference;
+  margin-bottom: 1rem;
+}
 ██   ██ ██    ██ ██████  ███████ ██████  ██      ██ ███    ██ ██   ██ ███████ 
 ██   ██  ██  ██  ██   ██ ██      ██   ██ ██      ██ ████   ██ ██  ██  ██      
 ███████   ████   ██████  █████   ██████  ██      ██ ██ ██  ██ █████   ███████ 
@@ -695,7 +735,7 @@ a.nav-link-primary-active:hover {
   transition:
     filter 0.3s ease,
     transform 0.3s ease;
-  transform: rotate(-12.5deg) scale(1.15);
+  transform: rotate(-3deg) scale(1.15);
 }
 
 a.nav-link-other {
@@ -712,7 +752,7 @@ a.nav-link-other:hover {
   transition:
     filter 0.3s ease,
     transform 0.3s ease;
-  transform: rotate(-12.5deg) scale(1.15);
+  transform: rotate(-3deg) scale(1.15);
 }
 a.nav-link-primary:hover {
   color: var(--color-nav-link-hover);
@@ -720,9 +760,8 @@ a.nav-link-primary:hover {
   transition:
     filter 0.2s ease,
     transform 0.2s ease;
-  transform: rotate(-12.5deg) scale(1.15);
+  transform: rotate(-3deg) scale(1.15);
 }
-
 /* -------------------------------------------------------------------------- */
 /* 🧭 Previous & Next Project Navigation Arrows                               */
 /* These styles are for the left and right arrows used to move between       */
@@ -820,7 +859,7 @@ a.nav-link-primary:hover {
   flex-direction: row;
 }
 .nav-branding-item {
-  padding: var(--padding-tiny);
+  padding: 0.4rem;
   font-size: 0.9rem;
 }
 
@@ -875,6 +914,7 @@ a.nav-link-primary:hover {
   border-radius: 0%;
   border: solid 1px #727272;
   background-color: #727272;
+  z-index: 1;
 }
 
 .point.top {
@@ -1087,8 +1127,19 @@ a.nav-link-primary:hover {
   width: 100%;
   height: auto;
   position: relative;
-  border: 1px solid #00ffff; /* Needed to position the overlay */
+  border: 1px solid #0b0b0b; /* Needed to position the overlay */
 }
+
+.work-page-grid-image {
+  transition:
+    filter 0.3s ease,
+    transform 0.4s ease;
+}
+.work-page-grid-image:hover {
+  filter: saturate(2) contrast(1.3) blur(3px);
+  transform: rotate(-0.6deg) scale(1.02);
+}
+
 /* Masonry Overlay Text */
 .overlay-container:hover .overlay {
   opacity: 1;
@@ -1097,7 +1148,7 @@ a.nav-link-primary:hover {
 /* Project container for background and padding */
 .project-container {
   background: var(--color-bg); /* Set project background color */
-  border: 1px var(--color-accent-primary);
+  border: 1px #fff;
   border-radius: 5px;
   /* corner-shape: notch; */
 }
@@ -1183,26 +1234,109 @@ a.nav-link-primary:hover {
 
 /* Grid container for the About section */
 .about-grid {
-  display: grid; /* Set to grid layout */
-  grid-template-columns: 1fr; /* Single column layout for mobile and smaller screens */
-  grid-gap: 1rem; /* Space between grid items */
-  background: var(--color-bg-about); /* Background color for the section */
-  padding: var(--padding-small); /* Padding around the grid */
-  flex: 1; /* Flex-grow to take up available space */
+  display: grid;
+  grid-template-columns: 0.6fr 1fr 1fr;
+  grid-gap: 1rem;
+  background: var(--color-bg-about);
+  padding: var(--padding-small);
+  flex: 1;
 }
 
 /* Image section in the About page grid */
 .about-grid-image {
   grid-column: 1 / 1; /* Image spans the first column */
   grid-row: 1 / 1; /* Image spans the first row */
+  align-items: flex-end;
+  backdrop-filter: blur(0px);
+  border: 1px solid #727272;
+  width: auto; /* Scales down on small screens, never scales past original size */
+  max-height: 400px; /* Maintains aspect ratio */
+  display: block; /* Removes tiny whitespace gap underneath the image */
+  background-color: #000000;
+  margin-left: auto;
 }
-
+.profile-img {
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+}
+.profile-img figure {
+  margin: 0;
+}
 /* Text section in the About page grid */
 .about-grid-text {
   grid-column: 1 / 2; /* Text spans the first column */
   grid-row: 2 / 3; /* Text spans the second row */
 }
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  width: 100%;
+  padding: var(--padding-medium);
+  border-top: 1px solid #727272;
+  margin-top: 2rem;
+}
 
+.details-list h3 {
+  font-weight: 300;
+  margin-bottom: 1rem;
+  text-transform: lowercase;
+}
+
+.details-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.grey-detail {
+  color: #727272;
+}
+.scramble {
+  display: inline-block;
+}
+.details-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #727272;
+  font-size: 0.9rem;
+}
+
+.details-list li span:last-child {
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+/*sticker feature*/
+.draggable-sticker {
+  position: absolute;
+  top: 50%;
+  left: 73%;
+  width: 120px;
+  z-index: 1;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.draggable-sticker img {
+  width: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.draggable-sticker:active {
+  cursor: grabbing;
+}
 /* 
 
 ███████  ██████   ██████  ████████ ███████ ██████  
@@ -1222,8 +1356,8 @@ a.nav-link-primary:hover {
   display: grid;
   grid-template-columns: 1fr; /* Single column layout */
   grid-gap: 3rem; /* Consistent spacing between sections */
-  min-height: 40vh; /* Allows footer to expand based on content, no fixed height */
-  margin-top: 2rem; /* Adds space above the footer */
+  min-height: 35vh; /* Allows footer to expand based on content, no fixed height */
+  margin-top: 1rem; /* Adds space above the footer */
   background-image: linear-gradient(
     to top,
     var(--color-accent-secondary) 0%,
@@ -1278,7 +1412,17 @@ a.nav-link-primary:hover {
 .footer-socials-list {
   margin-bottom: 2rem;
 }
-
+.footer-lg-image {
+  border: 1px solid #727272;
+  border-radius: 50%;
+  justify-content: flex-start;
+  align-items: center;
+  width: 55rem;
+  height: 28rem;
+  display: flex;
+  position: relative;
+  overflow: clip;
+}
 /* -------------------------------------------------------------------------- */
 /* 📏 Footer Item Spacing                                                     */
 /* -------------------------------------------------------------------------- */
@@ -1318,7 +1462,6 @@ a.nav-link-primary:hover {
 .footer-fineprint {
   font-size: 0.875rem; /* Slightly smaller for disclaimers or captions */
   color: #fff; /* Themed color */
-  margin-left: 1rem;
 }
 
 /* New item badges */
@@ -1823,25 +1966,24 @@ to keep your styles reusable and consistent.
   /* About Page Grid for Large Devices */
 
   .about-grid {
-    padding: var(--padding-jumbo);
-    grid-template-columns: 2fr 3fr;
+    padding: var(--padding-medium);
+    grid-template-columns: 0.7fr 1fr 1fr;
+  }
+  .about-grid-text {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
   }
 
   .about-grid-image {
-    grid-column: 1 / 1;
+    grid-column: 3 / 4;
     grid-row: 1 / 2;
   }
-  .about-grid-text {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-  }
-
   /* ------------------------------- */
   /* 🖥️ FOOTER GRID - DESKTOP LAYOUT */
   /* ------------------------------- */
 
   .footer-global {
-    padding-top: var(--padding-jumbo);
+    padding-top: var(--padding-large);
     padding-right: var(--padding-small);
     padding-bottom: 0;
     padding-left: var(--padding-small);
