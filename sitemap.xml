@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 
 
 <!-- 
@@ -44,40 +44,43 @@ For comprehensive SEO resources tailored for designers, including sitemap best p
 🔄 Remember: This is a REPLACE workflow, not an EDIT workflow!
 -->
 
+<?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<url>
-<loc>https://emilynlai.online/</loc>
-<lastmod>2026-11-02T20:09:37+00:00</lastmod>
-<priority>1.0000</priority>
-</url>
-<url>
-<loc>https://emilynlai.online/index.html</loc>
-<lastmod>2026-11-02T20:09:37+00:00</lastmod>
-<priority>0.8000</priority>
-</url>
-<url>
-<loc>https://emilynlai.online/archive.html</loc>
-<lastmod>2026-11-02T20:09:37+00:00</lastmod>
-<priority>0.8000</priority>
-</url>
-<url>
-<loc>https://emilynlai.online/about.html</loc>
-<lastmod>2026-11-02T20:09:37+00:00</lastmod>
-<priority>0.8000</priority>
-</url>
-<url>
-<loc>https://emilynlai.online/conflux-corps.html</loc>
-<lastmod>2026-11-02T20:09:37+00:00</lastmod>
-<priority>0.8000</priority>
-</url>
-<url>
-<loc>https://emilynlai.online/project-2.html</loc>
-<lastmod>2026-11-02T20:09:37+00:00</lastmod>
-<priority>0.8000</priority>
-</url>
-<url>
-<loc>https://emilynlai.online/project-3.html</loc>
-<lastmod>2026-11-02T20:09:37+00:00</lastmod>
-<priority>0.8000</priority>
-</url>
+
+  <url>
+       <loc>https://emilynlai.online/</loc>
+       <lastmod>2026-11-18T08:11:12+00:00</lastmod>
+       <priority>1.0000</priority>
+  </url>
+  <url>
+       <loc>https://emilynlai.online/index.html</loc>
+       <lastmod>2026-11-18T08:11:12+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://emilynlai.online/about.html</loc>
+       <lastmod>2026-11-18T08:11:12+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://emilynlai.online/archive.html</loc>
+       <lastmod>2026-11-18T08:11:12+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://emilynlai.online/conflux-corps.html</loc>
+       <lastmod>2026-11-18T08:11:12+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://emilynlai.online/project-2.html</loc>
+       <lastmod>2026-11-18T08:11:12+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://emilynlai.online/project-3.html</loc>
+       <lastmod>2026-11-18T08:11:12+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
 </urlset>
