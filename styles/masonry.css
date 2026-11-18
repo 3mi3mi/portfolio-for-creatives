@@ -1,3 +1,10 @@
+/* ------------------------------------------------------------------- */
+/* Masonry Grid                                                        */
+/* Pinterest-style image layout.                                       */
+/* Adapted from W3Bits (MIT license). See attribution below.           */
+/* Safely delete this file if you are not using this layout.           */
+/* ------------------------------------------------------------------- */
+
 /*!
  * Adapted from the masonry layout technique by W3Bits
  * Copyright (2012 onwards) W3Bits.com
@@ -5,44 +12,40 @@
  * Source: https://w3bits.com/labs/css-masonry/
  */
 
-/* 🔲 Masonry grid container
+/* Masonry grid container
    - Uses CSS columns to simulate a Pinterest-style layout
    - `column-gap` controls space between columns
 */
 .masonry-grid {
   transition: all 0.5s ease-in-out;
-  column-gap: 0.5rem;
+  column-gap: 2rem;
   column-fill: initial;
 }
 
-/* 📦 Masonry items
+/* Masonry items
      - Must be `inline-block` to participate in column flow
      - `vertical-align: top` ensures items align at the top of the column
   */
 .masonry-item {
-  margin-bottom: 0rem;
+  margin-bottom: 2rem;
   display: inline-block;
   vertical-align: top;
 }
 
-/* 🖼️ Image hover effects
+/* Image hover effects
      - Smooth transition and slight fade on hover
      - `backface-visibility` fixes flickering on some browsers
   */
 .masonry-item img {
+  transition: all 0.5s ease-in-out;
   backface-visibility: hidden;
-  transition:
-    filter 0.3s ease,
-    transform 0.4s ease;
 }
 
 .masonry-item:hover img {
-  filter: blur(4px);
-  filter: saturate(2) contrast(1.3) blur(3px);
-  transform: rotate(-0.6deg) scale(1.02);
+  opacity: 0.75;
 }
 
-/* 📱 Masonry layout for tablets
+/* Masonry layout for tablets
      - 2 columns between 768px and 1023px
   */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -51,7 +54,7 @@
   }
 }
 
-/* 🖥️ Masonry layout for larger screens
+/* Masonry layout for larger screens
      - 3 columns at 1024px and above
   */
 @media only screen and (min-width: 1024px) {
