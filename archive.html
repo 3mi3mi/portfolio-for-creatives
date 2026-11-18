@@ -48,16 +48,17 @@
         </li>
         <li class="nav-branding-item">
           <ul class="nav-branding-group">
-              <li class="nav-branding-item">
+            <li class="nav-branding-item">
               <a href="about.html" class="nav-link-primary">about</a>
             </li>
             <li class="nav-branding-item">
               <a href="index.html" class="nav-link-primary">work</a>
             </li>
             <li class="nav-branding-item">
-              <a href="archive.html" class="nav-link-primary-active">(archive)</a>
+              <a href="archive.html" class="nav-link-primary-active"
+                >(archive)</a
+              >
             </li>
-          
           </ul>
         </li>
         <li class="nav-branding-item">
@@ -74,8 +75,14 @@
     </header>
     <main class="main-work-section">
       <section class="portfolio">
-        <div>
-        <ul><p>An ongoing archive of experiments (<span class="symbol">🗮</span>), explorations (<span class="symbol">🛸</span>), and observations (<span class="symbol">👓</span>). (2023—2027)</p></ul></div>
+        <p>
+          An ongoing archive of experiments (<span class="symbol">🗮</span>),
+          explorations (<span class="symbol">🛸</span>), and observations (<span
+            class="symbol"
+            >👓</span
+          >). (2023—2027)
+        </p>
+
         <ul class="masonry-grid">
           <li class="masonry-item">
             <a
@@ -149,7 +156,7 @@
               </figure>
             </a>
           </li>
-          
+
           <li class="masonry-item">
             <a
               href="assets/archive/emilynlai-owl-sketch.jpg"
@@ -176,7 +183,7 @@
             >
               <figure class="project-image">
                 <img
-                  src="assets/archive/lausbub.jpg"
+                  src="css-masonry/files/images/oranges-pomegranates.jpg"
                   width="523"
                   height="657"
                   loading="lazy"
@@ -244,11 +251,11 @@
       </section>
     </main>
 
-   <ul class="footer-global">
+    <ul class="footer-global">
       <li class="footer-contact-social">
         <ul class="footer-socials-list">
-          <h3>digital footprint</h3>
           <li class="footer-item">
+            <h3>digital footprint</h3>
             <a
               href="https://www.instagram.com/digitaall/"
               target="_blank"
@@ -276,49 +283,43 @@
       </li>
       <li class="footer-tagline">
         <ul class="footer-socials-list">
-          <div class="framed-text-footer">
-            <span>
-              <span class="point top left"></span>
-              <span class="point top right"></span>
-              <span class="point bottom left"></span>
-              <span class="point bottom right"></span>
-            </span>
-            <h3 class="hero-headline">
-               (҂◡_◡)ᕤ —- - ⊹ ˖ <span class="symbol">🖅 🡪 </span>To get in touch, please write to 
-              <a href="mailto:emilynlai@gmail.com" class="nav-link-other"
-                >emilynlai@gmail.com</a
-              > !
-              
-            </h3>
-          </div>
-          <p class="footer-fineprint">&copy;2027 Emilyn Lai</p>
+          <li class="footer-item">
+            <div class="framed-text-footer">
+              <span>
+                <span class="point top left"></span>
+                <span class="point top right"></span>
+                <span class="point bottom left"></span>
+                <span class="point bottom right"></span>
+              </span>
+              <h3 class="hero-headline">
+                (҂◡_◡)ᕤ —- - ⊹ ˖ <span class="symbol">🖅 🡪 </span>To get in
+                touch, please write to
+                <a href="mailto:emilynlai@gmail.com" class="nav-link-other"
+                  >emilynlai@gmail.com</a
+                >
+                !
+              </h3>
+            </div>
+            <p class="footer-fineprint">&copy;2027 Emilyn Lai</p>
+          </li>
         </ul>
       </li>
-      <li class="footer-highlights"> <ul class="footer-socials-list">
-          <h3>site index</h3>
+      <li class="footer-highlights">
+        <ul class="footer-socials-list">
           <li class="footer-item">
-            <a
-              href="index.html"
-              class="nav-link-primary"
-              >work</a
-            >
-          </li> <li class="footer-item">
-            <a
-              href="archive.html"
-              class="nav-link-primary"
-              >archive</a
-            >
-          </li> <li class="footer-item">
-            <a
-              href="about.html"
-              class="nav-link-primary"
-              >about</a
-            >
-          </li></li>
-
-      <li class="footer-full-width"></li>
+            <h3>site index</h3>
+            <a href="index.html" class="nav-link-primary">work</a>
+          </li>
+          <li class="footer-item">
+            <a href="archive.html" class="nav-link-primary">archive</a>
+          </li>
+          <li class="footer-item">
+            <a href="about.html" class="nav-link-primary">about</a>
+          </li>
+        </ul>
+      </li>
     </ul>
-<div id="myID" class="bottomMenu hide">
+    <div id="myID" class="bottomMenu hide">
       <a href="#" class="back-to-top-button">⇈ nowhere to go but up</a>
     </div>
 
@@ -351,7 +352,7 @@
       window.addEventListener("scroll", myScrollFunc);
     </script>
     <script src="./lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
-   
+
     <script>
       function updateClock() {
         const now = new Date();
