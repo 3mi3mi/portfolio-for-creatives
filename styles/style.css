@@ -1913,6 +1913,7 @@ to keep your styles reusable and consistent.
   .work-sidebar-wrapper {
     padding: var(--padding-small);
     margin-bottom: 3rem;
+    padding-top: 0rem;
   }
 
   /* Project Page Flex Direction on Large Devices */
