@@ -563,7 +563,7 @@ sup {
   font-size: 1rem;
   line-height: 1.2;
   color: var(--color-text-project-description-bright);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   line-height: 1.2rem;
 }
 
@@ -622,7 +622,7 @@ sup {
 /*for paragraph text under links*/
 .link-subtext {
   margin-top: 0.3rem;
-  font-style: italic;
+  margin-bottom: 0.2rem;
 }
 
 .extra-dark-text {
@@ -1287,7 +1287,7 @@ a.nav-link-primary:hover {
   width: 100%;
   padding: var(--padding-small);
   padding-top: 1.5rem;
-  border-top: 0.5px solid #ff5cc0;
+  border-top: 0.5px solid #fff;
   margin-top: 2rem;
 }
 
