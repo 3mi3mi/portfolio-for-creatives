@@ -494,12 +494,12 @@ h4 {
 }
 
 h5 {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   line-height: 1.2;
   margin-bottom: 0.7rem;
   margin-top: 0.7rem;
   color: var(--h5-color);
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 h6 {
@@ -554,7 +554,7 @@ sup {
   letter-spacing: -0.04em;
   font-family: var(--font-family-project-title);
   color: var(--color-text-project-title);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
 }
 .project-description-section {
   margin-top: 2rem;
@@ -574,7 +574,15 @@ sup {
   width: 100%;
   padding: var(--padding-small);
 }
-
+.large-paragraph {
+  font-size: 2rem;
+  font-family: var(--font-family-heading);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--h1-color);
+  letter-spacing: -0.06rem;
+  font-weight: normal;
+}
 .nav-branding-non-link {
   font-size: 0.9rem;
   line-height: 1.2;
@@ -1098,7 +1106,7 @@ a.nav-link-primary:hover {
 /*tag item style*/
 .tag {
   font-family: "Cossette Texte";
-  font-size: 10px;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
