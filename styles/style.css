@@ -885,7 +885,7 @@ a.nav-link-primary:hover {
   justify-content: right;
   gap: 0.3rem;
   font-size: 0.9rem;
-  color: #f0c9e1;
+  color: rgba(240, 201, 225, 0.6);
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
