@@ -948,7 +948,7 @@ a.nav-link-primary:hover {
   aspect-ratio: 1;
   border-radius: 0%;
   border: 0.5px solid rgba(240, 201, 225, 0.5);
-  background-color: rgba(240, 201, 225, 0.5);
+  background-color: rgb(240, 201, 225);
   z-index: 1;
 }
 
@@ -1288,7 +1288,7 @@ a.nav-link-primary:hover {
 .about-grid-image {
   grid-column: 1 / 1; /* Image spans the first column */
   grid-row: 1 / 1; /* Image spans the first row */
-  align-items: flex-end;
+  align-items: center;
   backdrop-filter: blur(0px);
   border: 0.5px solid rgba(240, 201, 225, 0.5);
   width: auto; /* Scales down on small screens, never scales past original size */
@@ -1299,8 +1299,8 @@ a.nav-link-primary:hover {
 }
 .profile-img {
   position: relative;
-  display: inline-block;
-  margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 .profile-img figure {
   margin: 0;
@@ -1362,13 +1362,14 @@ a.nav-link-primary:hover {
 /*sticker feature*/
 .draggable-sticker {
   position: absolute;
-  top: 50%;
-  left: 73%;
-  width: 120px;
+  top: 25%;
+  left: 82%;
+  width: 170px;
   z-index: 1;
   cursor: grab;
   touch-action: none;
   user-select: none;
+  border: 0.5px solid rgba(240, 201, 225, 0.5);
 }
 
 .draggable-sticker img {
