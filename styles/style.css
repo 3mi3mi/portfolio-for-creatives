@@ -244,7 +244,7 @@ body {
 /* ------------------------------- */
 
 ::selection {
-  background: #0a02ff;
+  background: #ff0000;
   /* Uses your custom color for highlighted text */
 }
 
@@ -577,8 +577,28 @@ sup {
 .large-paragraph {
   font-size: 2rem;
   font-family: var(--font-family-heading);
+  line-height: 1.25;
+  margin-bottom: 0.8rem;
+  color: var(--h1-color);
+  letter-spacing: -0.06rem;
+  font-weight: normal;
+  text-wrap: balance;
+}
+.large-paragraph-indent {
+  font-size: 2rem;
+  font-family: var(--font-family-heading);
+  line-height: 1.25;
+  margin-bottom: 0.8rem;
+  color: var(--h1-color);
+  letter-spacing: -0.06rem;
+  font-weight: normal;
+  text-wrap: balance;
+}
+.large-paragraph-indent-2 {
+  font-size: 2rem;
+  font-family: var(--font-family-heading);
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
   color: var(--h1-color);
   letter-spacing: -0.06rem;
   font-weight: normal;
@@ -1805,7 +1825,7 @@ to keep your styles reusable and consistent.
 */
 .archive-headline {
   margin-top: var(--padding-small);
-  margin-bottom: var(--padding-medium);
+  margin-bottom: 1.2rem;
 }
 
 /*
