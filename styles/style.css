@@ -1402,7 +1402,7 @@ a.nav-link-primary:hover {
   display: grid;
   grid-template-columns: 1fr; /* Single column layout */
   grid-gap: 3rem; /* Consistent spacing between sections */
-  min-height: 35vh; /* Allows footer to expand based on content, no fixed height */
+  min-height: 30vh; /* Allows footer to expand based on content, no fixed height */
   margin-top: 1rem; /* Adds space above the footer */
 
   padding: var(--padding-small); /* Internal spacing */
@@ -1527,6 +1527,25 @@ a.nav-link-primary:hover {
   backdrop-filter: blur(8px);
   white-space: nowrap;
   width: max-content;
+}
+
+.footer-image {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+}
+
+.footer-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 7%;
+  left: var(--padding-small);
+  z-index: 2;
 }
 
 /* -------------------------------------------------------------------------- */
