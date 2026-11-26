@@ -7,8 +7,6 @@ const images = [
   "./assets/project-1/bubble3.png",
   "./assets/project-1/lips.png",
   "./assets/project-1/storm.png",
-  "./assets/project-1/ebox.png",
-  "./assets/project-1/horseshoe.png",
 ];
 
 const spacing = 60; // Distance between images on desktop
