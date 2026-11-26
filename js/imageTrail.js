@@ -1,14 +1,14 @@
 // CUSTOMIZE THESE
 
 const images = [
-  "./assets/project-1/guruguru.png",
-  "./assets/project-1/pompom.png",
   "./assets/project-1/skully.png",
-  "./assets/project-1/eyebow.png",
-  "./assets/project-1/webstickers.png",
-  "./assets/project-1/ika.png",
-  "./assets/project-1/skulltwin.png",
-  "./assets/project-1/speaker.png",
+  "./assets/project-1/bubble.png",
+  "./assets/project-1/bubble2.png",
+  "./assets/project-1/bubble3.png",
+  "./assets/project-1/lips.png",
+  "./assets/project-1/storm.png",
+  "./assets/project-1/ebox.png",
+  "./assets/project-1/horseshoe.png",
 ];
 
 const spacing = 60; // Distance between images on desktop
